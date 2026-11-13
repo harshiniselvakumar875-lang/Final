@@ -1,0 +1,14 @@
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\api\ApiExceptionHandler.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\api\ApiModels.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\api\PlatformController.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\BrandGuardApplication.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\security\DemoUserSeeder.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\security\JwtAuthenticationFilter.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\security\JwtService.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\security\SecurityConfig.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\service\AiAnalysisException.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\service\ClaimVerificationService.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\service\DocumentTextService.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\service\OpenAiAnalysisService.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\service\PlatformService.java
+C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\main\java\com\brandguard\service\VisualComplianceService.java

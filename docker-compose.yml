@@ -1,0 +1,70 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: brandguard
+      MYSQL_USER: brandguard
+      MYSQL_PASSWORD: brandguard
+      MYSQL_ROOT_PASSWORD: local-root-password
+    volumes:
+      - brandguard-mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping --protocol=tcp --host=127.0.0.1 --port=3306 --user=root --password=$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      SERVER_PORT: 8080
+      DATABASE_URL: jdbc:mysql://mysql:3306/brandguard?serverTimezone=UTC
+      DATABASE_USERNAME: brandguard
+      DATABASE_PASSWORD: brandguard
+      FRONTEND_ORIGIN: http://localhost:5174
+      JWT_SECRET: ${JWT_SECRET:-QnJhbmRHdWFyZFNlY3VyZVNlY3JldEtleTIwMjYxMTExIQ==}
+      SEED_USERS: "true"
+      ADMIN_EMAIL: admin@brandguard.local
+      REVIEWER_EMAIL: reviewer@brandguard.local
+      CREATOR_EMAIL: creator@brandguard.local
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-AdminPass123!}
+      REVIEWER_PASSWORD: ${REVIEWER_PASSWORD:-ReviewPass123!}
+      CREATOR_PASSWORD: ${CREATOR_PASSWORD:-CreatorPass123!}
+    ports:
+      - "8081:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -q --spider http://localhost:8080/
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 45s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    ports:
+      - "5174:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped
+
+volumes:
+  brandguard-mysql:

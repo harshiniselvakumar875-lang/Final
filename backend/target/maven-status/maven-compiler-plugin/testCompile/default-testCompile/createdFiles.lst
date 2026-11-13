@@ -1,0 +1,4 @@
+com\brandguard\service\ClaimVerificationServiceTest.class
+com\brandguard\security\JwtServiceTest.class
+com\brandguard\service\OpenAiAnalysisServiceTest.class
+com\brandguard\service\DocumentTextServiceTest.class

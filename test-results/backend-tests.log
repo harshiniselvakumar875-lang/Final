@@ -1,0 +1,52 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.brandguard:brandguard-api >--------------------
+[INFO] Building BrandGuard API 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ brandguard-api ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 7 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ brandguard-api ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 14 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ brandguard-api ---
+[INFO] skip non existing resourceDirectory C:\Users\DELL\Downloads\Brandguard-project\project\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ brandguard-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ brandguard-api ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.brandguard.security.JwtServiceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.896 s -- in com.brandguard.security.JwtServiceTest
+[INFO] Running com.brandguard.service.ClaimVerificationServiceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in com.brandguard.service.ClaimVerificationServiceTest
+[INFO] Running com.brandguard.service.DocumentTextServiceTest
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+06:58:34.060 [main] WARN org.apache.pdfbox.pdmodel.font.FileSystemFontProvider -- 9 new fonts found, font cache will be re-built
+06:58:34.068 [main] WARN org.apache.pdfbox.pdmodel.font.FileSystemFontProvider -- Building on-disk font cache, this may take a while
+06:58:41.191 [main] WARN org.apache.pdfbox.pdmodel.font.FileSystemFontProvider -- Finished building on-disk font cache, found 367 fonts
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.70 s -- in com.brandguard.service.DocumentTextServiceTest
+[INFO] Running com.brandguard.service.OpenAiAnalysisServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.594 s -- in com.brandguard.service.OpenAiAnalysisServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.865 s
+[INFO] Finished at: 2026-11-13T06:58:46+05:30
+[INFO] ------------------------------------------------------------------------
+
